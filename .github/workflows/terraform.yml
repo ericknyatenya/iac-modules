@@ -1,0 +1,11 @@
+name: Terraform Module Lint
+on:
+  pull_request:
+    paths:
+      - '**/*.tf'
+jobs:
+  tf:
+    uses: ericknyatenya/platform-pipelines/.github/workflows/terraform_reusable.yml@main
+    with:
+      working-directory: '.'
+
